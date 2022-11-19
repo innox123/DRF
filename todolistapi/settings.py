@@ -9,7 +9,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-%+s1u2947_w(@=+)($)ex15e+0$@3h&3#v2*erf=kwi=o0he(p'
 
 SECRET_KEY = config('SECRET_KEY')
 
@@ -67,12 +66,7 @@ WSGI_APPLICATION = 'todolistapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+DATABASES = config('DATABASES')
 
 
 # Password validation
